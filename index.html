@@ -120,12 +120,14 @@
     .cta-eyebrow{font-size:10px;letter-spacing:.35em;color:var(--gold-mid);margin-bottom:22px}
     .cta-title{font-size:clamp(38px,5.5vw,62px);margin-bottom:20px}
     .cta-desc{font-size:18px;color:#c4a875;line-height:2;margin-bottom:52px;max-width:460px;margin-left:auto;margin-right:auto}
-    .cta-video-section{display:flex;flex-direction:column;align-items:center;padding:0 40px;margin-bottom:60px}
+    .cta-video-section{display:flex;flex-direction:column;align-items:center;padding:72px 40px 88px;margin-bottom:0}
     .tiktok-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:linear-gradient(135deg,var(--gold-vein),var(--gold),var(--gold-bright));color:var(--obsidian);text-decoration:none;font-family:"DM Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;margin-bottom:24px;transition:transform .25s,box-shadow .25s}
     .tiktok-cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(140,100,10,.4)}
     .tiktok-live-dot{width:8px;height:8px;border-radius:50%;background:var(--obsidian2);box-shadow:0 0 0 3px rgba(0,0,0,.25);animation:blink 1.2s ease-in-out infinite}
-    .video-portrait-wrap{width:min(100%,360px);max-width:360px;position:relative;aspect-ratio:9/16;overflow:hidden;box-shadow:0 16px 64px rgba(0,0,0,.6),0 0 0 1px var(--border-fine);background:var(--obsidian2)}
+    .video-portrait-wrap{width:min(100%,430px);max-width:430px;position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--obsidian2);border:1px solid rgba(184,146,14,.28);box-shadow:0 24px 90px rgba(0,0,0,.72),0 0 0 1px rgba(255,255,255,.025)}
     .video-portrait-wrap video{width:100%;height:100%;object-fit:cover;border:0;display:block}
+    .video-helper{width:min(100%,430px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+    .video-fallback-link{display:inline-flex;color:var(--gold-mid);font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(184,146,14,.32);padding-bottom:4px}
     .social-cta-section{padding:0 0 120px}
     .social-cta-inner{max-width:680px;margin:0 auto;padding:0 40px}
     .social-follow-block{position:relative;background:var(--onyx);border:1px solid var(--border-mid);padding:56px 48px;overflow:hidden}
@@ -150,7 +152,7 @@
     .footer p{font-size:10.5px;letter-spacing:.1em;color:#7f6a40}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.1}}
     @media(max-width:700px){
-      .hero{grid-template-columns:1fr}.hero-photo{height:90vw;max-height:500px}.hero-photo::after{background:linear-gradient(to bottom,rgba(7,7,7,.1) 0%,transparent 15%,transparent 60%,rgba(7,7,7,.85) 100%)}.hero-photo-img{object-position:center center}.hero-content{padding:32px 20px}.sw,.live-inner,.cta-inner,.cta-video-section,.social-cta-inner{padding-left:20px;padding-right:20px}.score-grid{grid-template-columns:1fr}.tool-row{grid-template-columns:1fr}.tool-key{border-right:none;border-bottom:1px solid var(--border-hair);padding-bottom:8px}.tool-val{padding-top:10px}.live-inner{grid-template-columns:1fr;gap:40px}.social-follow-block{padding:40px 28px}
+      .hero{grid-template-columns:1fr}.hero-photo{height:90vw;max-height:500px}.hero-photo::after{background:linear-gradient(to bottom,rgba(7,7,7,.1) 0%,transparent 15%,transparent 60%,rgba(7,7,7,.85) 100%)}.hero-photo-img{object-position:center center}.hero-content{padding:32px 20px}.sw,.live-inner,.cta-inner,.cta-video-section,.social-cta-inner{padding-left:20px;padding-right:20px}.score-grid{grid-template-columns:1fr}.tool-row{grid-template-columns:1fr}.tool-key{border-right:none;border-bottom:1px solid var(--border-hair);padding-bottom:8px}.tool-val{padding-top:10px}.live-inner{grid-template-columns:1fr;gap:40px}.social-follow-block{padding:40px 28px}.video-portrait-wrap{width:100%}
     }
   </style>
 </head>
@@ -305,8 +307,23 @@
       <div class="locked">
         <div class="lock-wrap">🔒</div>
         <div class="locked-title">真正難的不是知道有風險</div>
-        <div class="locked-sub">而是分辨價格發現、假訊號和實際盤面該怎麼搭配看。<br>這個我會在直播裡分享怎麼看。</div>
+        <div class="locked-sub">而是分辨價格發現、假訊號和實際盤面該怎麼搭配看。<br>這個我會在直播裡用盤面拆給你看。</div>
       </div>
+    </div>
+  </section>
+
+  <section class="cta-video-section">
+    <a class="tiktok-cta-btn" href="https://www.tiktok.com/@iwantmoney16888?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">
+      <span class="tiktok-live-dot"></span>
+      <span>觀看直播</span>
+    </a>
+    <div class="video-portrait-wrap">
+      <video controls autoplay muted playsinline webkit-playsinline preload="auto" style="background:#0C0C0C;">
+        <source src="./assets/price-discovery-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-helper">
+      <a class="video-fallback-link" href="./assets/price-discovery-video.mp4" target="_blank" rel="noopener">影片無法播放？直接開啟</a>
     </div>
   </section>
 
@@ -315,7 +332,7 @@
       <div>
         <div class="live-badge"><span class="live-dot"></span><span class="live-badge-text">定期直播中</span></div>
         <h2 class="live-title">不是叫你恐慌<br>是叫你先把風險放進腦袋</h2>
-        <p class="live-desc">這張追價前風控檢查表你可以先拿去用。更細的部分，我會在直播裡分享：新加坡富台指期怎麼看、價格發現怎麼判斷、這次訊號要怎麼搭配盤面。</p>
+        <p class="live-desc">這張追價前風控檢查表你可以先拿去用。更細的部分，我會在直播裡拆：新加坡富台指期怎麼看、價格發現怎麼判斷、這次訊號要怎麼搭配盤面。</p>
       </div>
       <div class="schedule">
         <div class="schedule-item">
@@ -324,11 +341,11 @@
         </div>
         <div class="schedule-item">
           <div class="schedule-day">週二<br>週四</div>
-          <div class="schedule-time">晚上 19:00 - 21:00 案例分享</div>
+          <div class="schedule-time">晚上 19:00 - 21:00 案例拆解</div>
         </div>
         <div class="forum-box">
-          <div class="forum-box-label">直播真名 · 分享</div>
-          <p class="forum-box-desc">直播中會分享 <strong>價格發現、期貨異常波動與風險控管</strong><br>判斷追價前該先注意什麼</p>
+          <div class="forum-box-label">直播專屬 · 盤面拆解</div>
+          <p class="forum-box-desc">直播中會用實際盤面拆解 <strong>價格發現、期貨異常波動與風險控管</strong><br>幫你判斷追價前該先注意什麼</p>
         </div>
       </div>
     </div>
@@ -343,25 +360,13 @@
     </div>
   </section>
 
-  <section class="cta-video-section">
-    <a class="tiktok-cta-btn" href="https://www.tiktok.com/@iwantmoney16888?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">
-      <span class="tiktok-live-dot"></span>
-      <span>觀看直播</span>
-    </a>
-    <div class="video-portrait-wrap">
-      <video controls playsinline preload="metadata" style="background:#0C0C0C;">
-        <source src="https://ik.imagekit.io/wmb06guhs/MTVideo%20(1).mp4/ik-video.mp4?updatedAt=1779855409297" type="video/mp4">
-      </video>
-    </div>
-  </section>
-
   <section class="social-cta-section">
     <div class="social-cta-inner">
       <div class="social-follow-block">
         <div class="sfb-inner">
           <div class="sfb-eyebrow">Follow · 追蹤社群</div>
           <h2 class="sfb-title">追蹤我們的<br>社群平台</h2>
-          <p class="sfb-sub">IG 和 TikTok 同步直播，即時分享與風險提醒。<br>在任何影片留言 <strong>「價格發現」</strong>，自動私訊你更多內容。</p>
+          <p class="sfb-sub">IG 和 TikTok 同步直播，即時盤面拆解與風險提醒。<br>在任何影片留言 <strong>「價格發現」</strong>，自動私訊你更多內容。</p>
           <div class="sfb-divider"></div>
           <div class="sfb-buttons">
             <a class="sfb-btn ig" href="https://www.instagram.com/iwantmoney16888" target="_blank" rel="noopener">
