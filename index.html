@@ -125,7 +125,7 @@
     .tiktok-cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(140,100,10,.4)}
     .tiktok-live-dot{width:8px;height:8px;border-radius:50%;background:var(--obsidian2);box-shadow:0 0 0 3px rgba(0,0,0,.25);animation:blink 1.2s ease-in-out infinite}
     .video-portrait-wrap{width:min(100%,430px);max-width:430px;position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--obsidian2);border:1px solid rgba(184,146,14,.28);box-shadow:0 24px 90px rgba(0,0,0,.72),0 0 0 1px rgba(255,255,255,.025)}
-    .video-portrait-wrap video{width:100%;height:100%;object-fit:cover;border:0;display:block}
+    .video-portrait-wrap video,.video-portrait-wrap iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
     .video-helper{width:min(100%,430px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
     .video-fallback-link{display:inline-flex;color:var(--gold-mid);font-family:"DM Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(184,146,14,.32);padding-bottom:4px}
     .social-cta-section{padding:0 0 120px}
@@ -318,12 +318,15 @@
       <span>觀看直播</span>
     </a>
     <div class="video-portrait-wrap">
-      <video controls autoplay muted playsinline webkit-playsinline preload="auto" style="background:#0C0C0C;">
-        <source src="./assets/price-discovery-video.mp4" type="video/mp4">
-      </video>
+      <iframe
+        src="https://www.youtube.com/embed/kOiG1wSrMFo?playsinline=1&rel=0&modestbranding=1"
+        title="價格發現風險提醒"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
     <div class="video-helper">
-      <a class="video-fallback-link" href="./assets/price-discovery-video.mp4" target="_blank" rel="noopener">影片無法播放？直接開啟</a>
+      <a class="video-fallback-link" href="https://youtube.com/shorts/kOiG1wSrMFo?feature=share" target="_blank" rel="noopener">影片無法播放？前往 YouTube</a>
     </div>
   </section>
 
